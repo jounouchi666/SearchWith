@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "SearchWith",
+    "version": "1.0",
+    "icons": {
+        "16": "icons/icon-16.png",
+        "48": "icons/icon-48.png",
+        "128": "icons/icon-128.png"
+    },
+    "action": {
+        "default_popup": "options.html"
+    },
+    "description": "選択した文字列を任意のサイトで検索します。",
+    "permissions": [
+        "contextMenus",
+        "storage"
+    ],
+    "background":{
+        "service_worker": "service_worker.js",
+        "type": "module"
+    }
+}

@@ -1,0 +1,192 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+:root {
+    --bg-color: #f5f5f5;
+    --container-bg-color: white;
+    --container-shadow-color: #999;
+    --item-border-color: #bbb;
+    --font-color: black;
+    --input-border-color: #ddd;
+    --input-outline-focus-color: #aaa;
+    --input-font-color: #333;
+    --btn-color: #666;
+    --btn-active-color: #999;
+    --btn-font-color: white;
+    --btn-bover-bg-color: #eee;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    font-family: sans-serif;
+}
+.container {
+    margin: 2px auto;
+    padding: 0 10px;
+    width: 500px;
+    box-sizing: border-box;
+}
+input[type="text"] {
+    color: var(--input-font-color);
+    border: solid 1px var(--input-border-color);
+    border-radius: 3px;
+    padding: 0 .5rem;
+}
+input[type="text"]:focus {
+    outline: solid 1px var(--input-outline-focus-color);
+}
+
+/* タイトル */
+.title, .content {
+    background-color: var(--container-bg-color);
+    border-radius: 5px;
+    box-shadow: var(--container-shadow-color) 2px 2px 5px;
+    padding: 10px;
+}
+.title {
+    line-height: 2rem;
+}
+h1::before {
+    font-family: "Material Icons";
+    content: "\e8b6";
+    background-color: #0B0;
+    color: white;
+    height: 30px;
+    width: 30px;
+    margin-right: 8px;
+    padding: 5px 5px;
+    border-radius: 2px;
+    vertical-align: bottom;
+}
+h1 {
+    font-size: 1.2rem;
+}
+
+/* リスト */
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#add {
+    background-color: #339966;
+    color: white;
+    font-weight: bold;
+    border: none;
+    height: 30px;
+    width: 160px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#add:active {
+    background-color: #7ABD9B;
+    box-shadow: none;
+    transition: none;
+    transform: scale(0.95);
+}
+#add, .btn {
+    transition: all 0.1s ease-in-out;
+}
+#clear-all {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--container-bg-color);
+    font-size: 0.8rem;
+    color: var(--font-color);
+    border: solid 1px var(--btn-active-color);
+    border-radius: 50px;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+#clear-all::before {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.25rem;
+    font-size: 1rem;
+    color: var(--font-color);
+    font-family: "Material Icons";
+    content: "\e0b8";
+    user-select: none;
+}
+
+#clear-all:hover {
+    background-color: var(--btn-bover-bg-color);
+    color: var(--font-color);
+}
+
+#clear-all:active {
+    background-color: var(--item-border-color);
+    transform: scale(0.95);
+}
+
+.item {
+    list-style: none;
+    background-color: var(--container-bg-color);
+    margin-top: 5px;
+    padding: 15px;
+    border: solid 1px var(--item-border-color);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+.item:not(:first-of-type) {
+    margin-top: 8px;
+}
+.btn {
+    background-color: var(--btn-color);
+    color: var(--btn-font-color);
+    border: none;
+    height: 30px;
+    width: 30px;
+    box-sizing: border-box;
+    margin-left: 3px;
+    padding: 5px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn:active {
+    background-color: var(--btn-active-color);
+    transition: none;
+    transform: scale(0.95);
+}
+.site-toprow, .site-bottomrow {
+    display: flex;
+}
+.site-toprow {
+    justify-content: space-between;
+    align-items: center;
+}
+.arrow-up, .arrow-down {
+    cursor: pointer;
+    user-select: none;
+}
+.arrow-up:active, .arrow-down:active {
+    transform: scale(0.95);
+    opacity: 0.5;
+}
+.sitename {
+    font-size: 1rem;
+    font-weight: bold;
+}
+.siteurl {
+    width: 100%;
+}
+.disable-btn {
+    pointer-events: none;
+    opacity: 0.5;
+}
